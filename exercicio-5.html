@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 5</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Exercicio-1.html">Exercício 1</a></li>
+                <li><a href="Exercicio-2.html">Exercício 2</a></li>
+                <li><a href="Exercicio-3.html">Exercício 3</a></li>
+                <li><a href="Exercicio-4.html">Exercício 4</a></li>
+                <li><a href="Exercicio-5.html">Exercício 5</a></li>
+                <li><a href="Exercicio-6.html">Exercício 6</a></li>
+                <li><a href="Exercicio-7.html">Exercício 7</a></li>
+                <li><a href="Exercicio-8.html">Exercício 8</a></li>
+                <li><a href="Exercicio-9.html">Exercício 9</a></li>
+                <li><a href="Exercicio-10.html">Exercício 10</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--  -->
+    <main>
+        <h1>Exercício 5</h1>
+        <h2>5 – Crie um formulário de seleção de itens com checkbox. O formulário deve possuir um botão desabilitado. O botão
+            só se torna clicável quando tiver pelo menos 2 checkboxs marcado.</h2>
+        <form action="">
+            <input onclick="check()" type="checkbox" name="interesses" id="tecnologia"><label for="tecnologia">Tecnologia</label>
+            <input onclick="check()" type="checkbox" name="interesses" id="programacao"><label for="programacao">Programação</label>
+            <input onclick="check()" type="checkbox" name="interesses" id="ciencia"><label for="ciencia">Ciência</label>
+            <input onclick="check()" type="checkbox" name="interesses" id="musica"><label for="musica">Musica</label>
+            <input onclick="check()" type="checkbox" name="interesses" id="streaming"><label for="streaming">Streaming</label>
+            <button class="btn" id="submit" disabled>Enviar</button>
+        </form>
+    </main>
+
+    <script>
+        let submitButton = document.getElementById("submit");
+        let interesses = document.querySelectorAll("input[type = checkbox]");
+
+        function check() {
+            count = 0;
+            for (let i = 0; i < interesses.length; i++) {
+                if (interesses[i].checked) {
+                    count++;
+                }
+            }
+            (count >= 2) ? submitButton.disabled = false : submitButton.disabled = true;
+        }
+    </script>
+</body>
+
+</html>

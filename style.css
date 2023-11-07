@@ -1,0 +1,126 @@
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+ul li a {
+    padding: 5px;
+    background-color: #056f8a;
+    color: #e2e2e2;
+    border-radius: 2px;
+}
+
+ul li a:hover {
+    text-decoration: none;
+    padding: 5px;
+    background-color: #e2e2e2;
+    color: #056f8a;
+}
+
+main {
+    margin: 0 auto;
+    width: 500px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.cadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    border: 1px solid #056f8a;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0;
+}
+input:focus {
+    border: 1px solid;
+    /* outline: #056f8a; */
+}
+
+input:disabled {
+    border: #e2e2e2;
+    background-color: #e2e2e2;
+}
+
+button[type="submit"] {
+    background-color: #056f8a;
+    border: transparent solid;
+    padding: 5px;
+    color: #fff;
+}
+
+button[type="submit"]:hover {
+    background-color: #fff;
+    border: #056f8a solid;
+    padding: 5px;
+    color: #056f8a;
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn:not(:disabled) {
+    background-color: #056f8a;
+    border: transparent solid;
+    padding: 5px;
+    color: #fff;
+}
+.btn:disabled {
+    border: #bdbdbd solid;
+    padding: 5px;
+}
+
+.btn:hover:not(:disabled) {
+    background-color: #fff;
+    border: #fff solid;
+    padding: 5px;
+    color: #000;
+    cursor: pointer;
+}
+.btn-red {
+    background-color: red;
+    border: transparent solid;
+    padding: 5px;
+    color: #fff;
+}
+.btn-green {
+    background-color: green;
+    border: transparent solid;
+    padding: 5px;
+    color: #fff;
+}
+.btn-blue {
+    background-color: blue;
+    border: transparent solid;
+    padding: 5px;
+    color: #fff;
+}
+.btn-yellow {
+    background-color: yellow;
+    border: transparent solid;
+    padding: 5px;
+    color: #fff;
+}

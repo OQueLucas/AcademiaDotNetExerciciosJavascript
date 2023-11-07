@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 9</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Exercicio-1.html">Exercício 1</a></li>
+                <li><a href="Exercicio-2.html">Exercício 2</a></li>
+                <li><a href="Exercicio-3.html">Exercício 3</a></li>
+                <li><a href="Exercicio-4.html">Exercício 4</a></li>
+                <li><a href="Exercicio-5.html">Exercício 5</a></li>
+                <li><a href="Exercicio-6.html">Exercício 6</a></li>
+                <li><a href="Exercicio-7.html">Exercício 7</a></li>
+                <li><a href="Exercicio-8.html">Exercício 8</a></li>
+                <li><a href="Exercicio-9.html">Exercício 9</a></li>
+                <li><a href="Exercicio-10.html">Exercício 10</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--  -->
+    <main>
+        <h1>Exercício 9</h1>
+        <h2>9 - Crie um formulário com os campos para cadastrar o usuário de um sistema (login, senha e confirmar senha). Permita
+            que a página seja submetida apenas se todos os campos estiverem preenchidos, se os campos senha e confirma senha
+            forem iguais e a senha possuir entre 6 e 10 caracteres.</h2>
+        <form class="cadastro" action="Exercicio-9-confirmacao.html">
+            <label for="login">Login</label>
+            <input type="text" required name="login" id="login">
+            <label for="password">Senha</label>
+            <input type="password" required minlength="6" maxLength="10" name="password" id="password">
+            <label for="confirmPassword">Confirmar Senha</label>
+            <input type="password" required minlength="6" maxLength="10" name="confirmPassword" id="confirmPassword">
+            <button id="submit" type="submit">Enviar</button>
+        </form>
+    </main>
+
+    <script>
+        let submit = document.getElementById("submit");
+
+        submit.addEventListener("click", function (event) {
+
+            let password = document.getElementById("password");
+            let confirmPassword = document.getElementById("confirmPassword");
+
+            if (password.value != confirmPassword.value) {
+                alert("Senhas são diferentes.")
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+
+</html>

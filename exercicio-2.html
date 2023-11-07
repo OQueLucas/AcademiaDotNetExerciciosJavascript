@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 2</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Exercicio-1.html">Exercício 1</a></li>
+                <li><a href="Exercicio-2.html">Exercício 2</a></li>
+                <li><a href="Exercicio-3.html">Exercício 3</a></li>
+                <li><a href="Exercicio-4.html">Exercício 4</a></li>
+                <li><a href="Exercicio-5.html">Exercício 5</a></li>
+                <li><a href="Exercicio-6.html">Exercício 6</a></li>
+                <li><a href="Exercicio-7.html">Exercício 7</a></li>
+                <li><a href="Exercicio-8.html">Exercício 8</a></li>
+                <li><a href="Exercicio-9.html">Exercício 9</a></li>
+                <li><a href="Exercicio-10.html">Exercício 10</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!--  -->
+        <h1>Exercício 2</h1>
+        <h2>2 - Crie uma página com 4 links (tag <a>), cada um representando o nome de uma cor, que, utilizando o evento
+                onmouseover altere a cor do plano de fundo para cor correspondente.</h2>
+        <section class="flex">
+            <a class="btn btn-red" href="#" onmouseover="backgroundRed()">Vermelho</a>
+            <a class="btn btn-green" href="#" onmouseover="backgroundGreen()">Verde</a>
+            <a class="btn btn-blue" href="#" onmouseover="backgroundBlue()">Azul</a>
+            <a class="btn btn-yellow" href="#" onmouseover="backgroundYellow()">Amarelo</a>
+        </section>
+    </main>
+
+    <script>
+
+        function backgroundRed() {
+            document.body.style.backgroundColor = 'red';
+        }
+        function backgroundGreen() {
+            document.body.style.backgroundColor = 'green';
+        }
+        function backgroundBlue() {
+            document.body.style.backgroundColor = 'blue';
+        }
+        function backgroundYellow() {
+            document.body.style.backgroundColor = 'yellow';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 10</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Exercicio-1.html">Exercício 1</a></li>
+                <li><a href="Exercicio-2.html">Exercício 2</a></li>
+                <li><a href="Exercicio-3.html">Exercício 3</a></li>
+                <li><a href="Exercicio-4.html">Exercício 4</a></li>
+                <li><a href="Exercicio-5.html">Exercício 5</a></li>
+                <li><a href="Exercicio-6.html">Exercício 6</a></li>
+                <li><a href="Exercicio-7.html">Exercício 7</a></li>
+                <li><a href="Exercicio-8.html">Exercício 8</a></li>
+                <li><a href="Exercicio-9.html">Exercício 9</a></li>
+                <li><a href="Exercicio-10.html">Exercício 10</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- 10 - Crie um formulário de cadastro de cliente. O formulário deve conter os campos Nome (text), Pessoa (Física/Jurídica
+    – radio), CPF (text), CNPJ (text), data de nascimento, endereço (text), cep (text), telefone (text), email. O formulário
+    deve ativar o campo CPF apenas se o RadioButton de pessoa física estiver ativo e o campo de CNPJ no caso de pessoa
+    jurídica. O campo data de nascimento também só deve estar ativo no caso de pessoa física ser selecionado e deve aceitar
+    que somente números sejam digitados. O campo CEP também só deve aceitar número. -->
+    <main>
+        <h1>Exercício 10</h1>
+        <form class="cadastro" action="Exercicio-10-confirmacao.html">
+            <label for="name">Nome: </label>
+            <input type="text" required name="name" id="name">
+
+            <fieldset>
+                <input required type="radio" name="pessoa" id="pessoaFisica">
+                <label for="pessoaFisica">Pessoa física</label>
+            </fieldset>
+
+            <fieldset>
+                <input required type="radio" name="pessoa" id="pessoaJuridica">
+                <label for="pessoaJuridica">Pessoa jurídica</label>
+            </fieldset>
+
+            <label for="cpf">CPF: </label>
+            <input type="text" disabled required name="cpf" id="cpf">
+
+            <label for="cnpj">CNPJ: </label>
+            <input type="text" disabled required name="cnpj" id="cnpj">
+
+            <label for="dataNascimento">CNPJ: </label>
+            <input type="date" disabled required name="dataNascimento" id="dataNascimento">
+
+            <label for="endereco">Endereço: </label>
+            <input type="text" required name="endereco" id="endereco">
+
+            <label for="cep">CEP: </label>
+            <input type="text" required name="cep" id="cep">
+
+            <label for="telefone">Telefone: </label>
+            <input type="text" required name="telefone" id="telefone">
+
+            <button id="submit" type="submit">Enviar</button>
+        </form>
+    </main>
+
+    <script>
+        let submit = document.getElementById("submit");
+        let pessoaFisica = document.getElementById("pessoaFisica");
+        let pessoaJuridica = document.getElementById("pessoaJuridica");
+        let cpf = document.getElementById("cpf");
+        let cnpj = document.getElementById("cnpj");
+        let dataNascimento = document.getElementById("dataNascimento");
+
+        pessoaFisica.addEventListener("change", function () {
+            if (pessoaFisica.checked) {
+                cpf.disabled = false;
+                dataNascimento.disabled = false;
+                cnpj.disabled = true;
+            }
+        })
+
+        pessoaJuridica.addEventListener("change", function () {
+            if (pessoaJuridica.checked) {
+                cpf.disabled = true;
+                dataNascimento.disabled = true;
+                cnpj.disabled = false;
+            }
+        })
+    </script>
+</body>
+
+</html>

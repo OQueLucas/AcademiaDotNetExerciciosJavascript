@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 4</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Exercicio-1.html">Exercício 1</a></li>
+                <li><a href="Exercicio-2.html">Exercício 2</a></li>
+                <li><a href="Exercicio-3.html">Exercício 3</a></li>
+                <li><a href="Exercicio-4.html">Exercício 4</a></li>
+                <li><a href="Exercicio-5.html">Exercício 5</a></li>
+                <li><a href="Exercicio-6.html">Exercício 6</a></li>
+                <li><a href="Exercicio-7.html">Exercício 7</a></li>
+                <li><a href="Exercicio-8.html">Exercício 8</a></li>
+                <li><a href="Exercicio-9.html">Exercício 9</a></li>
+                <li><a href="Exercicio-10.html">Exercício 10</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--  -->
+    <main>
+        <h1>Exercício 4</h1>
+        <h2>4 – Crie um parágrafo (&lt;p&gt;) com um texto como conteúdo. Adicione um botão que, ao ser clicado, oculte ou mostre o
+            texto do parágrafo.</h2>
+        <button class="btn" onclick="toggle()">Toggle P</button>
+        <p id="toggleP">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias quaerat fugit sunt odio vero deserunt mollitia voluptate explicabo, sequi enim quisquam consequatur doloremque, facilis nisi voluptatum ab minima voluptas magnam.</p>
+
+    </main>
+    <script>
+        function toggle() {
+            let paragrafo = document.getElementById("toggleP");
+            paragrafo.style.display == "none" ? paragrafo.style.display = "block" : paragrafo.style.display = "none"
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 1</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Exercicio-1.html">Exercício 1</a></li>
+                <li><a href="Exercicio-2.html">Exercício 2</a></li>
+                <li><a href="Exercicio-3.html">Exercício 3</a></li>
+                <li><a href="Exercicio-4.html">Exercício 4</a></li>
+                <li><a href="Exercicio-5.html">Exercício 5</a></li>
+                <li><a href="Exercicio-6.html">Exercício 6</a></li>
+                <li><a href="Exercicio-7.html">Exercício 7</a></li>
+                <li><a href="Exercicio-8.html">Exercício 8</a></li>
+                <li><a href="Exercicio-9.html">Exercício 9</a></li>
+                <li><a href="Exercicio-10.html">Exercício 10</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--  -->
+    <main>
+        <h1>Exercício 1</h1>
+        <h2>1 - Crie um formulário com 4 botões que, ao clicar em cada um, altere a cor do plano de fundo da página para vermelho,
+            verde, azul e amarelo, respectivamente.</h2>
+        <section class="flex">
+            <button class="btn btn-red" onclick="backgroundRed()">Vermelho</button>
+            <button class="btn btn-green" onclick="backgroundGreen()">Verde</button>
+            <button class="btn btn-blue" onclick="backgroundBlue()">Azul</button>
+            <button class="btn btn-yellow" onclick="backgroundYellow()">Amarelo</button>
+        </section>
+    </main>
+
+    <script>
+        function backgroundRed() {
+            document.body.style.backgroundColor = 'red';
+        }
+        function backgroundGreen() {
+            document.body.style.backgroundColor = 'green';
+        }
+        function backgroundBlue() {
+            document.body.style.backgroundColor = 'blue';
+        }
+        function backgroundYellow() {
+            document.body.style.backgroundColor = 'yellow';
+        }
+    </script>
+</body>
+
+</html>
